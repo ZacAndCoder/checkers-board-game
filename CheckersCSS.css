@@ -4,19 +4,20 @@ body {
 }
 
 .prison {
-  border: 2px solid brown;
+  border: 2px solid black;
   margin: 2em;
-  background-color: #994C00;
+  background-color: #EEEEEE;
   height: 50px;
 }
 
 #game-rules {
   position: absolute;
   left: 40px;
+  top: 39%;
   width: 350px;
   border: 1px solid black;
   font-size: 25px;
-  background-color: turquoise;
+  background-color: #EEEEEE;
 }
 
 #display-names {
@@ -44,7 +45,7 @@ body {
 .grid {
   position: relative;
   left: 34.8%;
-  width: 30%;
+  width: 29.8%;
   display: grid;
   grid-template-columns: repeat(8, 50px);
   grid-template-rows: repeat(8, 1fr);
@@ -152,7 +153,7 @@ body {
 #forfeit {
   position: absolute;
   left: 75%;
-  bottom: 70px;
+  bottom: 19.5%;
   height: 50px;
   width: 100px;
   font-size: 25px;
