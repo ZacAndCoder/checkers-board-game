@@ -40,10 +40,10 @@ document.querySelector("#set-usernames").addEventListener("click", function() {
   gameHasStarted = true;
   playerOneName = document.querySelector("#username-1").value;
   playerTwoName = document.querySelector("#username-2").value;
-  document.querySelector("#username-1").style.visibility = "hidden";
-  document.querySelector("#username-2").style.visibility = "hidden";
-  document.querySelector("#set-usernames").style.visibility = "hidden";
-  document.querySelector("#forfeit").style.visibility = "visible";
+  document.querySelector("#username-1").style.display = "none";
+  document.querySelector("#username-2").style.display = "none";
+  document.querySelector("#set-usernames").style.display = "none";
+  document.querySelector("#forfeit").style.display = "inline-block";
   document.querySelector('#display-names').innerHTML = playerOneName + "'s" + " turn!";
 });
 
@@ -234,11 +234,11 @@ var checkMoves = function() {
   //End game if one player has no pieces left//
   if (document.querySelector("#prison-1").childNodes.length == 12) {
     document.querySelector('#display-names').innerHTML = playerOneName + " wins!";
-    document.querySelector("#forfeit").style.visibility = "hidden";
+    document.querySelector("#forfeit").style.display = "none";
     gameHasStarted = false;
   } else if (document.querySelector("#prison-2").childNodes.length == 12) {
     document.querySelector('#display-names').innerHTML = playerTwoName + " wins!";
-    document.querySelector("#forfeit").style.visibility = "hidden";
+    document.querySelector("#forfeit").style.display = "none";
     gameHasStarted = false;
   }
 }
@@ -381,6 +381,6 @@ document.querySelector("#forfeit").addEventListener("click", function() {
   } else {
     document.querySelector('#display-names').innerHTML = playerOneName + " wins!";
   }
-  document.querySelector("#forfeit").style.visibility = "hidden";
+  document.querySelector("#forfeit").style.display = "none";
   gameHasStarted = false;
 });
