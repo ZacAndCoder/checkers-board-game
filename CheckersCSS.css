@@ -1,10 +1,11 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 300px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media only screen and (min-width: 301px) and (max-width: 600px) {
   html {
     font-size: 10px;
-  }
-  #start-game {
-    position: relative;
-    transform: translateX(-140%);
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 780px) {
@@ -13,34 +14,31 @@
   }
 }
 body {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 4fr 1fr 1fr;
-  grid-template-areas:
-    "prison-1 prison-1 prison-1"
-    "rules board game"
-    "prison-2 prison-2 prison-2"
-    ". forfeit .";
-  background-color: brown;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: rgb(180, 157, 161);
   font-family: "Georgia", serif;
+}
+header {
+  text-align: center;
+}
+main {
+  position: relative;
 }
 button {
   cursor: pointer;
+}
+input, button {
+  border: 1px solid black;
 }
 .prison {
   border: 2px solid #121212;
   margin: 1rem;
   background-color: #EEEEEE;
   height: 3.125rem;
-}
-#prison-1 {
-  grid-area: prison-1;
-}
-#prison-2 {
-  grid-area: prison-2;
+  display: none;
 }
 #game-rules {
-  grid-area: rules;
   margin: 0 2rem;
   border: 1px solid #121212;
   font-size: 1.56em;
@@ -48,15 +46,22 @@ button {
   visibility: hidden;
 }
 #display-names {
-  grid-area: game;
-  margin: 0 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
   font-size: 1.56rem;
-  color: #F0F0F0;
+  color: #121212;
 }
 #start-game {
-  grid-area: game;
-  margin: auto;
+  text-align: center;
   z-index: 10;
+  
+  border-radius: 5%;
+  background-color: #c98722;
+  position: absolute;
+  max-width: 90vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .usernames {
   height: 3.125rem;
@@ -64,9 +69,9 @@ button {
   font-size: 1.56rem;
   margin: 0.3rem;
   font-family: "Georgia", serif;
+  background-color: #edce9f;
 }
 .grid {
-  grid-area: board;
   margin: 0 auto;
   width: 25rem;
   height: auto;
@@ -76,6 +81,8 @@ button {
   justify-items: center;
   font-size: 0px;
   transform: rotate(180deg);
+  border: 15px solid #66420c;
+  border-radius: 5%;
 }
 .square {
   height: 3.125rem;
@@ -145,13 +152,13 @@ button {
   }
 }
 #forfeit {
-  grid-area: forfeit;
-  margin: 0 auto;
   height: 3.125rem;
-  width: 50%;
   font-size: 1.56rem;
   display: none;
-  z-index: 10;
-  background-color: gray;
-  color: #F0F0F0;
+  background-color: #F0F0F0;
+  border: 1px solid #121212;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
 }
