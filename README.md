@@ -7,7 +7,7 @@ To reference the rules of the game, click [here](http://www.chesslab.com/rules/C
 
 ## Description
 
-Using plain HTML, CSS, and JavaScript, I built the board game "Checkers." I focused more on functionality than aesthetics, but I hope that my code demonstrates an understanding of the three languages mentioned above.  
+Using plain HTML, CSS, and JavaScript, I built the board game "Checkers."
 
 There are two boxes displaying "Player 1" and "Player 2" on the right-hand side of the page. Users can enter their own custom names here. Below these boxes is a button that starts the game. Note that pieces cannot be moved on the board until this button is pressed. When the game starts, the current player's name will be shown to the right of the board. This player can then make any legal moves available. If a player clicks on a square that they cannot legally move to, nothing will happen, and they must choose another square. This version of Checkers forces jumps, so if a player can capture an enemy piece, then they *must* do so. Captured pieces are moved to one of two rectangles sitting above and below the game board. 
 
@@ -15,7 +15,7 @@ Once a move has been made, the board will rotate, and the next player's name wil
 
 ## GIF
 
-![Checkers-GIF](https://user-images.githubusercontent.com/91081344/136244557-210a9377-a3c4-4201-b24f-cace54b37150.gif)
+![CheckersGIF](https://user-images.githubusercontent.com/91081344/160467598-6f4e012c-520c-4ae7-9f5b-3563d02eaa4f.gif)
 
 ## Example Code
 
